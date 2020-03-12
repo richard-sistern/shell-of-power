@@ -6,7 +6,7 @@ $permitted_managers = @("bla", "bla")
 $check = Get-WindowsFeature | Where-Object {$_.Name -eq "SNMP-Service"}
 If ($check.Installed -ne "True") {
         #Install/Enable SNMP Services
-        Add-WindowsFeature SNMP-Services | Out-Null
+        Add-WindowsFeature SNMP-Service | Out-Null
 }
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities" /v $community_string /t REG_DWORD /d 4 /f | Out-Null
