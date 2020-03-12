@@ -3,7 +3,7 @@ $community_string = "bla"
 $permitted_managers = @("bla", "bla")
 
 #Check If SNMP Services Are Already Installed
-$check = Get-WindowsFeature | Where-Object {$_.Name -eq "SNMP-Services"}
+$check = Get-WindowsFeature | Where-Object {$_.Name -eq "SNMP-Service"}
 If ($check.Installed -ne "True") {
         #Install/Enable SNMP Services
         Add-WindowsFeature SNMP-Services | Out-Null
