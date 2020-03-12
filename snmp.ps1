@@ -8,4 +8,4 @@ If ($check.Installed -ne "True") {
         Add-WindowsFeature SNMP-Services | Out-Null
 }
 
-
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\SNMP\Parameters\ValidCommunities" /v $community_string /t REG_DWORD /d 4 /f | Out-Null
