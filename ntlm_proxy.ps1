@@ -1,3 +1,5 @@
+#https://kimconnect.com/powershell-winhttp-proxy/
+
 # Method 1: Set PowerShell User Agent to be recognized by the proxy and authenticate via Default AD credential
 $webClient = new-object System.Net.WebClient
 $webClient.Headers.Add(“user-agent”, “PowerShell Script”)
