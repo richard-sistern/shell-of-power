@@ -1,2 +1,2 @@
 # Shell-Of-Power
-PowerShell
+Collection of PowerShell scripts and snippets
