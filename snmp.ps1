@@ -1,6 +1,6 @@
 #Read only community string
 $community_string = "bla"
-$permitted_managers = @("bla", "bla")
+$permitted_managers = @("host1", "host2")
 
 #Check If SNMP Services Are Already Installed
 $check = Get-WindowsFeature | Where-Object {$_.Name -eq "SNMP-Service"}
