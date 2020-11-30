@@ -16,6 +16,9 @@
 # List DHCP servers in AD
 Get-DhcpServerInDC
 
+# Remove server from authorised DHCP list in AD
+ Remove-DhcpServerInDC -DnsName "dhcpserver.contoso.com" -IPAddress 10.10.10.2
+
 # Set the DHCP server FQDN
 [string] $dhcp_server = "dhcp.server.fqdn"
 
