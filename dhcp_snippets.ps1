@@ -13,6 +13,9 @@
 
 #>
 
+# List DHCP servers in AD
+Get-DhcpServerInDC
+
 # Set the DHCP server FQDN
 [string] $dhcp_server = "dhcp.server.fqdn"
 
