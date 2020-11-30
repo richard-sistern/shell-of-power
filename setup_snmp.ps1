@@ -1,3 +1,19 @@
+.<#
+.SYNOPSIS
+  Configure the SNMP service on a server
+
+.DESCRIPTION
+  Installs the SNMP service if not already present
+  Configures SNMP community string and permitted managers
+
+.OUTPUTS
+
+.EXAMPLE
+
+.LINK
+
+#>
+
 #Read only community string
 $community_string = "bla"
 $permitted_managers = @("host1", "host2")
