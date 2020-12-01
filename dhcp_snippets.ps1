@@ -41,3 +41,6 @@ Foreach ($scope in $scopes)
 
 # Remove a specific option from a scope
 Remove-DhcpServerv4OptionValue -ComputerName $dhcp_server -ScopeId 10.10.10.0 -OptionId 44
+
+# Add a WPAD option to a scope
+Set-DhcpServerv4OptionValue -ComputerName $dhcp_server -ScopeId 10.10.10.0 -Wpad "http://web.server/wpad.dat"/
