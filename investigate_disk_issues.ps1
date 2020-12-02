@@ -15,4 +15,4 @@
   https://askbob.tech/interpreting-event-153-errors/
 #>
 
-Get-WinEvent –FilterHashtable @{logname='System'; id=129,153} | Group-Object {$_.TimeCreated.ToString("yyyy-MM")} | Select-Object Name, Count
+Get-WinEvent FilterHashtable @{logname="System"; id=129,153} | Group-Object {$_.TimeCreated.ToString("yyyy-MM")} | Select-Object Name, Count
