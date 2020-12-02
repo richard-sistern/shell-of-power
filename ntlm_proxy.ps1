@@ -2,7 +2,7 @@
 
 # Method 1: Set PowerShell User Agent to be recognized by the proxy and authenticate via Default AD credential
 $webClient = new-object System.Net.WebClient
-$webClient.Headers.Add(“user-agent”, “PowerShell Script”)
+$webClient.Headers.Add("user-agent", "PowerShell Script")
 $webClient.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
 
 # Method 2: Run 1-off Web Request commands
