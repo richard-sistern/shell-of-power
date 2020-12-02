@@ -7,7 +7,8 @@ $webClient.Proxy.Credentials = [System.Net.CredentialCache]::DefaultNetworkCrede
 
 # Method 2: Run 1-off Web Request commands
 $Proxy = "http://proxy:80"
-$Password = ConvertTo-SecureString "PASSWORD" -AsPlainText -Force
+#$Password = ConvertTo-SecureString "PASSWORD" -AsPlainText -Force
+$Password = Read-Host -Prompt "Enter your password" -AsSecureString
 $Credentials = New-Object System.Management.Automation.PSCredential -ArgumentList "DOMAIN\ADMINISTRATOR",$Password
 Invoke-WebRequest -uri https://google.com -Proxy $Proxy -ProxyCredential $Credentials
 
