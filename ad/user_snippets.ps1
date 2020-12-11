@@ -19,11 +19,11 @@ Get-Aduser -Properties mail, description, office -Filter {enabled -eq $true -and
         Export-Csv c:\ad_mailboxes.csv
 
 # Add user to a group
+# Note: Add-ADGroupMember does not accept pipeline input
 $group = Get-ADGroup "Name of group"
 $user = Get-ADUser -filter { UserPrincipalName -eq "Name of user" }
 Add-ADGroupMember $group -Members $user
 
-# Note: Add-ADGroupMember does not accept pipeline input
 
 
 
