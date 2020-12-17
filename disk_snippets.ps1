@@ -26,6 +26,9 @@ Get-Disk | Where-Object IsSystem -eq $False
 # List offline disks
 Get-Disk | Where-Object IsOffline –eq $True
 
+# Initialise recently added disks
+Get-Disk | Where-Object PartitionStyle –Eq 'RAW' | Initialize-Disk
+
 #
 # Disk\Partition
 #
@@ -51,3 +54,10 @@ Get-Volume
 
 # Format volumes with NTFS
 Format-Volume -DriveLetter E, H -FileSystem NTFS -Confirm:$false
+
+# Everything together
+Get-Disk |
+    Where-Object PartitionStyle -eq 'RAW' |
+        Initialize-Disk -PartitionStyle MBR -PassThru |
+            New-Partition -AssignDriveLetter -UseMaximumSize |
+                Format-Volume -FileSystem NTFS -Confirm:$false
