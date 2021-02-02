@@ -3,13 +3,6 @@
   Snippets for managing security in PowerShell
 
 .DESCRIPTION
-
-
-.OUTPUTS
-
-.EXAMPLE
-
-.LINK
 #>
 
 # Allow unsigned scripts to run in the current process
