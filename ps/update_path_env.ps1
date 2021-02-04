@@ -3,5 +3,5 @@
   Add something to the path environment variable
 #>
 
-$path = [Environment]::GetEnvironmentVariable('PSModulePath', 'Machine') + ';C:\folder'
-[Environment]::SetEnvironmentVariable("PSModulePath", $path, 'Machine')
+$path = [Environment]::GetEnvironmentVariable('Path', 'Machine') + ';C:\folder'
+[Environment]::SetEnvironmentVariable("Path", $path, 'Machine')
