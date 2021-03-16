@@ -1,0 +1,9 @@
+{
+    "name": "John",
+    "age": 30,
+    "cars": [
+        {"make": "Ford"},
+        {"make": "BMW"},
+        {"make": "Fiat"}
+    ]
+}
