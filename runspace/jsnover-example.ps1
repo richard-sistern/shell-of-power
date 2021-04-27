@@ -1,7 +1,10 @@
 # Example from Jeffrey Snover
 # Running multiple scripts in-process without having them interefere with on another
 # https://twitter.com/jsnover/status/1386749721453031424
+
+# Further reading:
 # https://docs.microsoft.com/en-us/powershell/scripting/developer/hosting/adding-and-invoking-commands?view=powershell-7.1
+# https://devblogs.microsoft.com/scripting/beginning-use-of-powershell-runspaces-part-1/
 
 $sb = @'
     if (!${global:x})
