@@ -1,0 +1,9 @@
+{
+    "Groups": {
+        "From": "CN=group,OU=groups,OU=...",
+        "To": "CN=group,OU=groups,OU=..."
+    },
+    "Input": {
+        "Path": "c:/folder/file.txt"
+    }
+}
