@@ -24,6 +24,5 @@ $group = Get-ADGroup "Name of group"
 $user = Get-ADUser -filter { UserPrincipalName -eq "Name of user" }
 Add-ADGroupMember $group -Members $user
 
-
-
-
+# Retrieve account SID
+Get-Aduser user_name | Select Name, SID
